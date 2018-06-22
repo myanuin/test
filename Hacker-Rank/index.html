@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Object Oriented JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <style>
+            h1{ 
+                text-align: center; 
+                color: #444; 
+                font-family: 'Trebuchet MS';
+                margin: 60px auto; 
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h1> Hacker Rank JavaScript</h1> -->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <!-- <h1>Contact</h1> -->
+                 
+                    <form id="contact-form"   action=""  onsubmit="return validateForm()">
+
+                        <div class="messages"></div>
+                    
+                        <div class="controls">
+                    
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">FirstName</label>  
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Please enter your firstname *" onblur="validateName(name)" />  
+                                        <span id="nameError" style="display: none;color:red">You can only use alphabetic characters, hyphens and apostrophes</span>  
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input type="text" name="lname" id="lname" class="form-control" placeholder="Please enter your lastname *" onblur="validateName(name)" />  
+                                        <span id="lnameError" style="display: none;color:red">You can only use alphabetic characters, hyphens and apostrophes</span>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input type="text" class="form-control" placeholder="Please enter your email" name="email" id="email" onblur="validateEmail(value)" />  
+                                        <span id="emailError" style="display: none;color:red">You must enter a valid email address</span>  
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Phone</label>
+                                        <input id="form_phone" type="text" name="phone" id="telephone" class="form-control" placeholder="Please enter your phone" onblur="phonenumber(phone)">
+                                        <span id="telError" style="display: none;color:red">You must enter a valid Telephone number</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4"  data-error="Please,leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Send message" >
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="validator.js"></script>
+        <script src="objects.js"></script>
+    </body>
+</html>
+
